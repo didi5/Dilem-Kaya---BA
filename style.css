@@ -1,0 +1,339 @@
+/* This is the CSS file for the pages of the website. 
+Can be enhanced by deleting or compromsing, however not the focus on pure effieceny, 
+only for demonstration */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* <!-- Google Fonts stylesheets for the 'Inter' and 'Poppins' fonts . --> */
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+/* position nav bar */
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+/* text color nav bar */
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/*when hovered, its 100% */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #bf31bf;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+/* here when hovered */
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px ; 
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+
+.b-owner{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff ;
+    padding: 14px 36px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: left; /* Float left to position on the left side */
+    margin-right: 8px; /* some spacing between buttons */
+
+}
+
+.b-buyer{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: right; /* Float right to position on the right side */
+
+}
+
+.b-owner:hover{
+    border: 1px solid  #911191;
+    background:  #911191;
+    transition: 1s;
+}
+
+.b-buyer:hover{
+    border: 1px solid  #911191;
+    background:  #911191;
+    transition: 1s;
+}
+
+
+.sto{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #911191 ;
+    padding: 14px 36px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: left; /* Float left to position on the left side */
+    margin-right: 8px; /* some spacing between buttons */
+}
+
+/* hide icons on nav bar*/
+nav .fa{
+    display: none;
+}
+
+/* section seller */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 30px 100px 0 100px;
+}
+
+
+.input-box {
+            border: 2px solid #911191;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            width: 300px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the box horizontally */
+            text-align: center; /* Center text horizontally within the box */
+            margin-bottom: 20px;
+        }
+
+        /* Input field container styles */
+        .input-field-container {
+            display: flex; /* Use Flexbox */
+            flex-direction: column; /* Stack input and label vertically */
+            align-items: center; /* Center items horizontally within the container */
+            margin-bottom: 10px;
+        }
+
+        /* Input field styles */
+        .input-field {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 0 auto; /* Center the input fields within the box */
+            border: none;
+            border-radius: 5px;
+            text-align: center; /* Center text horizontally within the input field */
+        }
+
+        /* Label styles */
+        label {
+            color: white;
+            font-weight: bold;
+            text-align: left; 
+            position: relative;
+            cursor: pointer;
+        }
+
+        .info-box {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            top: 100%; /* Position below the label */
+            left: 0;
+            width: max-content;
+            display: none; /* Initially hidden */
+        }
+
+        /* Show information box on label hover */
+        label:hover .info-box {
+            display: block;
+        }
+
+
+/* section buyer */
+.vote {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 40px 65px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: left; /* Float right to position on the right side */
+
+}
+
+.loyalty {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 40px 65px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: right; /* Float right to position on the right side */
+
+}
+
+.calculator-container {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between; /* Align items to the right */
+    align-items: flex-start;
+    display: inline-block;
+    
+}
+
+.calculate-button-container {
+    flex: 1; /* Make the button container take up available space */
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    align-items: flex-start;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    float: right; /* Float right to position on the right side */
+}
+
+
+/* section how to */
+
+.how-to-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.how-to-column {
+    flex: 1;
+}
+
+.how-to-box {
+    border: 1px solid #bf31bf;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/* responsive */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px ; 
+    }
+    .nav-links{
+        position: absolute;
+        background: #911191;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        padding: 30px;
+    }
+
+}
+
+
+/* responsive nature: this CSS media query that targets screens 
+with a maximum width of 700 pixels (max-width: 700px) for smaller ones = mobile phones, 
+this page will be responsive */
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+

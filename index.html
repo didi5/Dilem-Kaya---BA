@@ -1,0 +1,73 @@
+<!-- This webpage is the home page of the website. It contains the navigation bar, 
+    the header, and the body, with only a landingpage. It also contains the 
+    links to the external CSS files.
+
+    The How to Page and the Contact page are yet to be implemented. 
+    But this is not the focus of this project.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investing made easy</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Preconnect to the Google Fonts server to improve font loading speed. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Poppins:ital,wght@0,300;1,200;1,300&display=swap"
+    rel="stylesheet" />
+  <!-- Link to an external FontAwesome CSS file for icons. -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" />
+  <!-- Link to an external FontAwesome CSS file for icons, which can be used to add the 
+        homepages social media icons. -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" />
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="images/tokenimmo.png" /></a>
+      <div class="nav-links" id="navLinks">
+        <!-- if we click on it: hide menu-->
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="seller.html">OWNER</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="howto.html">HOW TO</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+      <h1>Real Estate in Web3 -</h1>
+      <p>
+        The <span style="color: #bf31bf">Next Generation</span> of Investing
+        <br />
+        <br />
+        <h4>TRANSPARENT.</h4>
+
+        <h4><span style="color: #bf31bf">SECURE.</span> <br /> </h4>
+        <h4> FAST. </h4>
+      </p>
+
+      <!-- href, this links it to the seller page, the STO calculator -->
+      <a href="seller.html" class="b-owner">I'm an Owner</a>
+      <a href="community.html" class="b-buyer">I'm a Buyer</a>
+    </div>
+  </section>
+  <script src="sto-calculator.js"></script>
+</body>
+
+</html>
